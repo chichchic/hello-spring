@@ -4,6 +4,9 @@
 쉽게 만들고, 단독적으로 만들 수 있으며, 상용화 수준까지 단순하게 만들수 있고
 스프링 기반 어플리케이션을 만들어준다.
 
+내장 웹서버(tomcat)가 있기 때문에 서버 구동시간이 매우 단순해지며, config에서 jetty등으로 바꿀 수 있다.
+
+security, data JPA 등의 다른 스프링 프레임워크 요소를 쉽게 사용할 수 있음.
 **dependency**
 
 스프링은 가 너무 길고, 버전 정보까지 전부 직접 설정해야하나
@@ -14,7 +17,6 @@
 
 스프링 부트는 application.properties(application.yml)만 설정해주면 됨
 
-
 # 라이브러리 살펴보기
 
 maven, gradle은 라이브러리간의 의존성을 관리해준다.
@@ -23,7 +25,7 @@ maven, gradle은 라이브러리간의 의존성을 관리해준다.
 
 과거에는 WAS를 직접 서버에 설치 한 후 자바 코드를 밀어넣는 방식 (웹서버와 개발 코드가 분리)
 
-지금은 embeded되어있는 상태로 build한 후 올리면 완료된다.
+지금은 embeded되어있는 상태로 build한 후 올리면 완료된다.(내장 서블릿 컨테이너 덕분)
 
 따라서 단순히 gradle르 build된 jar 파일만 서버에서 실행시키면 된다.
 
@@ -53,7 +55,7 @@ spring-test: 스프링 통합 테스트 지원
 
 이때는 viewResolver가 아닌 HttpMessageConverter가 동작한다.
 
-보통은 text로 반환(StringConverter가 동작) 
+보통은 text로 반환(StringConverter가 동작)
 
 객체가 오면 json형식(defualt, 여러 포맷을 다 지원해줌)로 반환(JsonConverter가 동작)
 
