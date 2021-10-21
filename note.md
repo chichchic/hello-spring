@@ -25,6 +25,8 @@ maven, gradle은 라이브러리간의 의존성을 관리해준다.
 
 지금은 embeded되어있는 상태로 build한 후 올리면 완료된다.
 
+따라서 단순히 gradle르 build된 jar 파일만 서버에서 실행시키면 된다.
+
 **logging**
 
 로그로 출력해 기록을 남겨야 에러 발견등을 쉽게 할 수 있어서 중요하다.
@@ -40,3 +42,9 @@ mockito: 목 라이브러리
 assertj: 테스트 코드를 좀 더 편하게 작성해주는 도와주는 라이브러리
 
 spring-test: 스프링 통합 테스트 지원
+
+# controller와 static content
+
+관련 controller를 찾을 수 있다면 viewResolver가 resouces의 template package에서 해당 파일명.html을 찾는다.
+
+만약, 찾을 수 없다면 static폴더에서 정적 컨텐츠를 찾아 반환한다.
