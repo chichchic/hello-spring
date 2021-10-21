@@ -48,3 +48,14 @@ spring-test: 스프링 통합 테스트 지원
 관련 controller를 찾을 수 있다면 viewResolver가 resouces의 template package에서 해당 파일명.html을 찾는다.
 
 만약, 찾을 수 없다면 static폴더에서 정적 컨텐츠를 찾아 반환한다.
+
+**@ResponseBody**
+
+이때는 viewResolver가 아닌 HttpMessageConverter가 동작한다.
+
+보통은 text로 반환(StringConverter가 동작) 
+
+객체가 오면 json형식(defualt, 여러 포맷을 다 지원해줌)로 반환(JsonConverter가 동작)
+
+클라이언트의 HTTP Accept header와 서버 컨트롤러 반환 타입 정보 둘을 조합해서 HttpMessageConverter가 선택된다.
+
