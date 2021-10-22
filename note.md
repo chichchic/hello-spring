@@ -131,3 +131,9 @@ application과 database를 연결할 때 사용하는 기술
 
 단위테스트를 진행할때는 Java에서만 이루어지도록 하는것이 좋다.(Spring container 없이 하는것이 좋은 테스트일 확률이 높다.)
 
+# JdbcTemplate
+JDBC API에서 본 반복 코드를 대부분 제거해준다.
+
+##template method pattern
+
+
