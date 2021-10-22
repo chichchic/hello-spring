@@ -1,6 +1,13 @@
 package hello.hellospring.domain;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "Member")
 public class Member {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
 
