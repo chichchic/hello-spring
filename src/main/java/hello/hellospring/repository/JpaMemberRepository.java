@@ -7,7 +7,7 @@ import javax.persistence.EntityManager;
 import java.util.List;
 import java.util.Optional;
 
-@Repository
+//@Repository
 public class JpaMemberRepository implements MemberRepository {
 
     private final EntityManager entityManager;
